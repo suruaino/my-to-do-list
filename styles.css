@@ -22,18 +22,26 @@ body{
     align-items: center;
 }
 .main-wrapper{
-    background-color: var(--bg-clr-2);
+    background-color: transparent;
+    width: 100%;
     border: 10px solid var(--bg-clr-2);
+    border-radius: 10px;
+    padding: 1rem;
 }
 h2{
     color: #000000;
     font-size: 2rem;
-    font-weight: bold;
-    line-height: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 2.4rem;
 }
 aside{
     background-color: var(--bg-clr-1);
-    
+   display: flex;
+   flex-direction: column;
+   /* gap: .5rem; */
+}
+aside p:last-child{
+    margin-top: 2rem;
 }
 aside p{
     position: relative;
@@ -65,7 +73,7 @@ main{
     background-color: var(--bg-clr-2);
     color: #ffffff;
     width: 100%;
-    max-width: 30rem;
+    /* max-width: 26rem; */
     min-height: auto;
     padding: 1rem 2rem;
     margin-top: 1rem;
@@ -73,7 +81,7 @@ main{
     flex-direction: column;
     align-items: flex-start;
     justify-content: start;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
 }
 main h1{
     text-transform: uppercase;
@@ -90,12 +98,13 @@ main .writingbx-container{
     gap: 1rem;
 }
 main .writingbx-container input{
+    width: 100%;
     background-color: transparent;
     margin: .2rem .5rem;
     padding-inline: .5rem;
 }
 main .writingbx-container button{
-    width: 100%;
+    width: auto;
     background-color: var(--btn-bg);
     text-transform: uppercase;
     font-weight: 500;
@@ -163,4 +172,30 @@ li{
         opacity: 1;
         transform: translateX(6rem);
     }
+}
+
+
+@media (min-width:768px) {
+    .main-wrapper{
+        background-color: transparent;
+        max-width: 50rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem;
+    }
+    main{
+        margin-top: 0;
+        border-radius: 10px;
+        min-height: 20rem;
+        max-height: 95%;
+    }
+    main .writingbx-container input{
+        width: 100%;
+
+    }
+    main .writingbx-container button{
+        width: auto;
+    }
+
 }
