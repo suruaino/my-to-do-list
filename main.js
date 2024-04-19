@@ -1,5 +1,25 @@
 const toDo = document.getElementById("to-do-entering");
 const addBtn = document.getElementById("add-btn");
+const typer = document.querySelector(".typer");
+
+
+
+setInterval( () => {
+    setTimeout( () => {
+        typer.innerHTML = "Code";
+    }, 1500)
+    setTimeout( () => {
+        typer.innerHTML = "Program";
+    }, 2500)
+    
+    setTimeout( () => {
+        typer.innerHTML = "Design";
+    }, 3500)
+    setTimeout( () => {
+        typer.innerHTML = "Talk too";
+    }, 4500)
+}, 5000)
+
 
 // console.log(toDo);
 addBtn.addEventListener("click", () => {

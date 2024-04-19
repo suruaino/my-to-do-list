@@ -16,30 +16,49 @@ body{
     background-color: var(--bg-clr-1);
     color: var(--clr-1);
     display: flex;
+    padding-inline: 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
+.main-wrapper{
+    background-color: var(--bg-clr-2);
+    border: 10px solid var(--bg-clr-2);
+}
 h2{
+    color: #000000;
     font-size: 2rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+}
+aside{
+    background-color: var(--bg-clr-1);
+    
 }
 aside p{
     position: relative;
     width: fit-content;
-    padding-inline: 2rem;
+    font-size: 1.5rem;
+    /* padding-inline: 2rem; */
     overflow-x: hidden;
 }
 aside p::after{
-    background-color: #333333;
     content: "";
-    width: 4rem;
-    height: 1.5rem;
-    /* border: 1px solid white; */
+    background-color: #333333;
+    width: inherit;
+    inset: 0 0 0 auto;
     position: absolute;
-    /* top: 50%;
-    transform: translateY(-50%); */
+    /* border: 1px solid white; */
     animation: write 1s linear infinite;
+}
+aside p::before{
+    content: "";
+    background-color: #000000;
+    /* width: .5rem; */
+    inset: 0 5rem 0 auto;
+    position: absolute;
+    /* border: 1px solid white; */
+    animation: cursor 1s linear infinite;
 }
 
 main{
@@ -47,18 +66,25 @@ main{
     color: #ffffff;
     width: 100%;
     max-width: 30rem;
-    padding: 1rem;
+    min-height: auto;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: start;
+    border-radius: 10px;
 }
 main h1{
     text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 500;
 }
 main .writingbx-container{
+    width: 100%;
     background-color: var(--bg-clr-1);
     padding: .3rem;
+    margin-top: 1.5rem;
     border-radius: 20px;
     display: flex;
     gap: 1rem;
@@ -67,9 +93,9 @@ main .writingbx-container input{
     background-color: transparent;
     margin: .2rem .5rem;
     padding-inline: .5rem;
-    /* border-bottom: 1px solid var(--clr-1); */
 }
 main .writingbx-container button{
+    width: 100%;
     background-color: var(--btn-bg);
     text-transform: uppercase;
     font-weight: 500;
@@ -98,7 +124,10 @@ li{
     justify-content: flex-start;
     align-items: center;
     gap: 2rem;
+    border-bottom: 1px solid gray;
+    padding-block: .5rem;
 }
+
 .check-bx{
     width: 1.5rem;
     height: 1.5rem;
@@ -107,9 +136,31 @@ li{
 }
 @keyframes write {
     0%{
-        transform: translateX(-2.5rem);
+        transform: translateX(0rem);
     }
     100%{
-        transform: translateX(.5rem);
+        transform: translateX(6rem);
+    }
+}
+@keyframes cursor {
+    0%{
+        opacity: 0;
+        transform: translateX(0rem);
+    }
+    20%{
+        opacity: 0.2;
+    }
+    40%{
+        opacity: 0.4;
+    }
+    60%{
+        opacity: 0.6;
+    }
+    80%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(6rem);
     }
 }
