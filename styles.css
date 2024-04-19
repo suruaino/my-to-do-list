@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-clr-1: #333333;
+    --bg-clr-2: #111111;
+    --clr-1: #9f9f9f;
+}
+body{
+    height: 100vh;
+    background-color: var(--bg-clr-1);
+    color: var(--clr-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    font-size: 2rem;
+}
+aside p{
+    position: relative;
+    width: fit-content;
+    padding-inline: 2rem;
+    overflow-x: hidden;
+}
+aside p::after{
+    background-color: #333333;
+    content: "";
+    width: 4rem;
+    height: 1.5rem;
+    /* border: 1px solid white; */
+    position: absolute;
+    /* top: 50%;
+    transform: translateY(-50%); */
+    animation: write 1s linear infinite;
+}
+
+main{
+    background-color: var(--bg-clr-2);
+    color: #ffffff;
+    width: 100%;
+    max-width: 30rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+main h1{
+    text-transform: uppercase;
+}
+main .writingbx-container{
+    background-color: var(--bg-clr-1);
+    padding: .5rem;
+    border-radius: 10px;
+}
+main .writingbx-container input{
+    background-color: transparent;
+}
+main .writingbx-container button{
+    
+}
+main .list-bx{
+    width: 100%;
+    max-width: 90%;
+    margin-top: 1rem;
+    display: flex;
+}
+main .list-bx .list{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+main .list-bx .list .check-bx{
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+}
+@keyframes write {
+    0%{
+        transform: translateX(-2.5rem);
+    }
+    100%{
+        transform: translateX(.5rem);
+    }
+}
