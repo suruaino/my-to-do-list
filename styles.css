@@ -24,7 +24,7 @@ body{
 .main-wrapper{
     background-color: transparent;
     width: 100%;
-    border: 10px solid var(--bg-clr-2);
+    border: 6px solid var(--bg-clr-2);
     border-radius: 10px;
     padding: 1rem;
 }
@@ -36,8 +36,8 @@ h2{
 }
 aside{
     background-color: var(--bg-clr-1);
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
    /* gap: .5rem; */
 }
 aside p:last-child{
@@ -130,13 +130,17 @@ main .list-bx{
 li{
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     gap: 2rem;
     border-bottom: 1px solid gray;
     padding-block: .5rem;
 }
-
+li span:nth-child(2){
+    /* justify-self: start; */
+    /* text-align: left; */
+    /* display: none; */
+}
 .check-bx{
     width: 1.5rem;
     height: 1.5rem;

@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function () {
 const toDo = document.getElementById("to-do-entering");
 const addBtn = document.getElementById("add-btn");
 const typer = document.querySelector(".typer");
@@ -8,18 +9,18 @@ const toDoListContainer = document.querySelector(".list-bx");
 setInterval( () => {
     setTimeout( () => {
         typer.innerHTML = "Code";
-    }, 1500)
+    }, 1000)
     setTimeout( () => {
         typer.innerHTML = "Program";
-    }, 2500)
+    }, 3000)
     
     setTimeout( () => {
         typer.innerHTML = "Design";
-    }, 3500)
+    }, 5000)
     setTimeout( () => {
         typer.innerHTML = "Talk too";
-    }, 4500)
-}, 5000)
+    }, 7000)
+}, 8000)
 
 
 // console.log(toDo);
@@ -65,3 +66,5 @@ function showData(){
 }
 
 // showData();
+
+})
