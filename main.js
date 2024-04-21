@@ -25,7 +25,9 @@ setInterval( () => {
 
 // console.log(toDo);
 addBtn.addEventListener("click", () => {
-
+  if(toDo.value == ""){
+    addBtn.removeEventListener("click");
+  }
   let li = document.createElement("li");
   li.innerHTML = `<span class="check-bx"></span> <span class="to-do-main">${toDo.value}</span> <button><i class="fa fa-close" aria-hidden="true"></i></buton>`;
   toDoListContainer.appendChild(li);

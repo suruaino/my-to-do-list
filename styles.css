@@ -30,20 +30,22 @@ body{
 }
 
 aside{
-    background: linear-gradient(35deg, #222222 70%, #000000);
+    background: linear-gradient(35deg, #222222 50%, #000000, #777777);
     color: #ffffff;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
 
 }
-
+aside h2{
+    font-size: 1.5rem;
+}
 aside p{
     position: relative;
     width: fit-content;
-    font-size: 1.5rem;
+    font-size: 1rem;
     overflow-x: hidden;
 }
 aside p::after{
@@ -107,7 +109,7 @@ main .writingbx-container button{
     padding: .3rem  2rem ;
     border-radius: 15px;
     z-index: 100;
-    transition: .2s;
+    /* transition: .2s; */
 }
 main .writingbx-container button:hover{
     background-color: var(--btn-bg-hover);
@@ -130,8 +132,14 @@ li{
     justify-content: space-between;
     align-items: center;
     padding: .5rem 1rem;
-    /* border-radius: 10px; */
+    border-radius: 20px;
 }
+li span:nth-child(2){
+    margin-left: 0;
+}
+/* li span:not(li span:first-child){
+    margin-right: 35%;
+} */ */
 li button i{
    color: red;
 }
@@ -180,7 +188,7 @@ i{
 @media (min-width:768px) {
     .main-wrapper{
         background-color: transparent;
-        max-width: 50rem;
+        max-width: 51rem;
         height: auto;
         display: flex;
         flex-direction: row;
@@ -192,16 +200,24 @@ i{
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-       
+        justify-content: center;
+        align-items: center;
         height: 100%;
         border-radius: 10px 0 0 10px;
+        position: relative;
+    }
+    aside h2{
+        font-size: 2rem;
+    }
+    aside p{
+        position: absolute;
+        bottom: 0;
     }
     main{
         margin-top: 0;
         border-radius: 0 10px 10px 0;
         max-width: 50%;
         min-height: 20rem;
-        /* max-height: 95%; */
     }
     main h1{
         font-size: 2rem;
@@ -216,5 +232,8 @@ i{
     main .writingbx-container button{
         width: auto;
     }
+    /* li span:nth-child(2){
+        margin-left: -10rem;
+    } */
 
 }
