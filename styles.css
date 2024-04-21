@@ -100,7 +100,9 @@ main .writingbx-container input{
     background-color: transparent;
     margin: .2rem .5rem;
     padding-inline: .5rem;
+    outline: none;
 }
+
 main .writingbx-container button{
     width: auto;
     background-color: var(--btn-bg);
@@ -135,13 +137,10 @@ li{
     border-radius: 20px;
 }
 li span:nth-child(2){
-    margin-left: 0;
-}
-/* li span:not(li span:first-child){
-    margin-right: 35%;
-} */ */
-li button i{
-   color: red;
+    width: 100%;
+    text-align: left;
+    margin-left: 1rem;
+    /* border: 1px solid red; */
 }
 .check-bx{
     border: 1px solid #ffffff;
@@ -150,9 +149,7 @@ li button i{
     justify-content: center;
     align-items: center;
 }
-i{
-    
-}
+
 @keyframes write {
     0%{
         transform: translateX(0rem);
@@ -229,11 +226,10 @@ i{
         width: 100%;
 
     }
+    li span:nth-child(2){
+        margin-left: 1rem;
+    }
     main .writingbx-container button{
         width: auto;
     }
-    /* li span:nth-child(2){
-        margin-left: -10rem;
-    } */
-
 }

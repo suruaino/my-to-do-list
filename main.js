@@ -28,6 +28,7 @@ addBtn.addEventListener("click", () => {
   if(toDo.value == ""){
     addBtn.removeEventListener("click");
   }
+  toDo.focus();
   let li = document.createElement("li");
   li.innerHTML = `<span class="check-bx"></span> <span class="to-do-main">${toDo.value}</span> <button><i class="fa fa-close" aria-hidden="true"></i></buton>`;
   toDoListContainer.appendChild(li);
@@ -35,14 +36,14 @@ addBtn.addEventListener("click", () => {
   li.firstElementChild.style.height = "1rem";
   toDo.value = "";
   const delBtn = li.lastChild;
-  saveData()
+//   saveData()
 //   attachEventListeners();
 
   if (li) {
     delBtn.addEventListener("click", () => {
       li.remove();
     });
-    saveData()
+    // saveData()
   }
   li.querySelectorAll(".to-do-main").forEach((mainText) => {
     mainText.addEventListener("click", () => {
@@ -55,6 +56,7 @@ addBtn.addEventListener("click", () => {
       li.firstElementChild.style.borderRadius = "50%";
       li.firstElementChild.style.padding = "0.8rem";
       li.firstElementChild.appendChild(i);
+      li.lastElementChild.style.color = "red"
     });
   });
 
