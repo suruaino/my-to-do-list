@@ -44,11 +44,15 @@ addBtn.addEventListener("click", () => {
   }
   li.querySelectorAll(".to-do-main").forEach((mainText) => {
     mainText.addEventListener("click", () => {
+      let i = document.createElement("i");
+      i.innerHTML = `<i class='fa fa-check text-white' aria-hidden='true'></i>`;
+      
       mainText.style.color ="#555555"
       li.firstElementChild.style.width = "1rem";
       li.firstElementChild.style.height = "1rem";
       li.firstElementChild.style.borderRadius = "50%";
-      li.firstElementChild.style.backgroundColor = "red";
+      li.firstElementChild.style.padding = "0.8rem";
+      li.firstElementChild.appendChild(i);
     });
   });
 
